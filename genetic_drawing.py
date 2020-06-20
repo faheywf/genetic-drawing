@@ -121,8 +121,8 @@ class DNA:
         self.minSize = brushstrokes_range[0] #0.1 #0.3
         self.maxSize = brushstrokes_range[1] #0.3 # 0.7
         self.maxBrushNumber = 4
-        self.brushSide = 300 #brush image resolution in pixels
-        self.padding = int(self.brushSide*self.maxSize / 2 + 5)
+        self.brushSize = 300 #brush image resolution in pixels
+        self.padding = int(self.brushSize*self.maxSize / 2 + 5)
         
         self.canvas = canvas
         
@@ -270,7 +270,7 @@ class DNA:
         except:
             print('------ \n', 'in image ',inImg.shape)
             print('pivot: ', posY, posX)
-            print('brush size: ', self.brushSide)
+            print('brush size: ', self.brushSize)
             print('brush shape: ', brushImg.shape)
             print(" Y range: ", rangeY, 'X range: ', rangeX)
             print('bg coord: ', posY, posY+rangeY, posX, posX+rangeX)
